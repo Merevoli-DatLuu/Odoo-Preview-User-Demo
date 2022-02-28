@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_users_tree" model="ir.ui.view">
+            <field name="name">res.users.tree.inherit</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <button type="object" name="preview_user_page" string="Preview"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_users_action" model="ir.actions.act_window">
+            <field name="name">user</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.users</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    create your first user!
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_user_preview_root"
+            name="User Preview"
+            action="view_users_action"
+            sequence="10"/>
+    </data>
+</odoo>
