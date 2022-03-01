@@ -13,6 +13,7 @@
     'version': '13.0.1', 
     'depends': ['base'], 
     'data': [
+        'security/groups.xml',
         'views/user_preview_views.xml',
         'views/user_preview_template_views.xml'
     ], 

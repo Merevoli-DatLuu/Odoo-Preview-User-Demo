@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="base.view_users_tree"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="before">
-                    <button type="object" name="preview_user_page" string="Preview"/>
+                    <button type="object" name="preview_user_page" string="Preview" groups="user_preview.group_previewable_user"/>
                 </xpath>
             </field>
         </record>
